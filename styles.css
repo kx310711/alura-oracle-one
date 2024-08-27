@@ -1,0 +1,147 @@
+:root {
+    --dark-blue: #0a3871;
+    --light-blue: #62a0f1;
+    --main-color: #ddc1f1; /* Color similar a indigo blue */
+    --white-color: #ffffff;
+    --gray-color: #353535;
+    --inter-font: "Inter", sans-serif;
+    --console-font: "Console", consolas, monospace;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--inter-font);
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+}
+
+.container {
+    background-color: var(--white-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 80rem; /* Aumentar el ancho máximo */
+    width: 100%;
+}
+
+.flex-container {
+    display: flex; /* Usar flexbox para dividir en dos columnas */
+    justify-content: space-between; /* Espacio entre las columnas */
+    align-items: flex-start; /* Alinear elementos al inicio */
+}
+
+.input-area, .output-area {
+    flex: 1; /* Ambas áreas ocupan el mismo espacio */
+    margin: 0 1rem; /* Espacio entre las áreas */
+}
+
+.presentation-image {
+    max-width: 30%; /* Ajustar el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-left: 1rem; /* Espacio a la izquierda de la imagen */
+}
+
+textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--gray-color);
+    border-radius: 4px;
+    font-size: 1.6rem;
+    box-sizing: border-box;
+    background-color: var(--white-color);
+    color: var(--gray-color);
+    resize: none;
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.button-group {
+    display: flex; /* Alinea los botones en fila */
+    gap: 1rem; /* Espacio entre los botones */
+    margin-top: 1rem; /* Espacio entre el textarea y los botones */
+}
+
+button {
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Agregar transición */
+}
+
+button:hover {
+    background-color: var(--light-blue);
+    border-color: var(--light-blue);
+    color: var(--white-color); /* Cambiar color del texto al hacer hover */
+}
+
+.error {
+    color: red;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+}
+
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--gray-color);
+}
+
+/* Responsive Design Tablet */
+@media (max-width: 768px) {
+    body {
+        padding: 2rem;
+    }
+
+    .container {
+        padding: 2rem;
+        max-width: 100%;
+        flex-direction: column; /* Cambia a columna en tablet */
+    }
+
+    .flex-container {
+        flex-direction: column; /* Cambia a columna en tablet */
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* Responsive Design Movil */
+@media (max-width: 380px) {
+    html {
+        font-size: 50%;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+.logo {
+    position: absolute; /* Posiciona el logo de forma absoluta */
+    top: 20px; /* Ajusta la distancia desde la parte superior */
+    left: 20px; /* Ajusta la distancia desde la izquierda */
+    max-width: 100px; /* Ajusta el tamaño máximo del logo */
+    height: auto; /* Mantiene la proporción del logo */
+    z-index: 10; /* Asegura que el logo esté por encima de otros elementos */
+}
+
