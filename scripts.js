@@ -57,3 +57,4 @@ function desencriptar(texto) {
 }
 
 
+//Todo esta revisado, Fin espero pasar a la siguiente face de one
